@@ -3,17 +3,17 @@ document.addEventListener(
     () => {
 
         console.log(
-            "Rocket Product v2 loaded."
+            "Rocket One v3 loaded successfully."
         );
 
 
-        // ==================================================
-        // ELEMENTS
-        // ==================================================
+        // =====================================================
+        // ELEMENT REFERENCES
+        // =====================================================
 
-        const menuToggle =
+        const mobileMenuButton =
             document.getElementById(
-                "menu-toggle"
+                "mobile-menu-button"
             );
 
 
@@ -23,75 +23,81 @@ document.addEventListener(
             );
 
 
-        const launchDemo =
+        const galleryImage =
             document.getElementById(
-                "launch-demo"
+                "gallery-image"
             );
 
 
-        const momentumValue =
+        const galleryLabel =
             document.getElementById(
-                "momentum-value"
+                "gallery-label"
             );
 
 
-        const momentumBar =
+        const galleryTitle =
             document.getElementById(
-                "momentum-bar"
+                "gallery-title"
             );
 
 
-        const focusScore =
+        const galleryDescription =
             document.getElementById(
-                "focus-score"
+                "gallery-description"
             );
 
 
-        const automationCount =
-            document.getElementById(
-                "automation-count"
-            );
-
-
-        const demoStatus =
-            document.getElementById(
-                "demo-status"
-            );
-
-
-        const monthlyToggle =
-            document.getElementById(
-                "monthly-toggle"
-            );
-
-
-        const annualToggle =
-            document.getElementById(
-                "annual-toggle"
-            );
-
-
-        const priceValues =
+        const galleryThumbnails =
             document.querySelectorAll(
-                ".price-value"
+                ".gallery-thumb"
             );
 
 
-        const faqButtons =
-            document.querySelectorAll(
-                ".faq-question"
+        const benchmarkButton =
+            document.getElementById(
+                "benchmark-button"
             );
 
 
-        const planButtons =
-            document.querySelectorAll(
-                ".plan-button"
+        const benchmarkResult =
+            document.getElementById(
+                "benchmark-result"
             );
 
 
-        const revealElements =
-            document.querySelectorAll(
-                ".reveal"
+        const cpuMeter =
+            document.getElementById(
+                "cpu-meter"
+            );
+
+
+        const memoryOptions =
+            document.getElementById(
+                "memory-options"
+            );
+
+
+        const storageOptions =
+            document.getElementById(
+                "storage-options"
+            );
+
+
+        const configurationSummary =
+            document.getElementById(
+                "configuration-summary"
+            );
+
+
+        const totalPrice =
+            document.getElementById(
+                "total-price"
+            );
+
+
+        const buyButton =
+            document.getElementById(
+                "buy-button"
             );
 
 
@@ -101,24 +107,69 @@ document.addEventListener(
             );
 
 
-        // ==================================================
-        // MOBILE NAVIGATION
-        // ==================================================
+        const tourButton =
+            document.getElementById(
+                "tour-button"
+            );
 
-        menuToggle.addEventListener(
+
+        const productModal =
+            document.getElementById(
+                "product-modal"
+            );
+
+
+        const modalClose =
+            document.getElementById(
+                "modal-close"
+            );
+
+
+        const modalBackdrop =
+            document.querySelector(
+                ".modal-backdrop"
+            );
+
+
+        const modalConfigure =
+            document.getElementById(
+                "modal-configure"
+            );
+
+
+        const revealElements =
+            document.querySelectorAll(
+                ".reveal"
+            );
+
+
+        const counters =
+            document.querySelectorAll(
+                ".counter"
+            );
+
+
+        // =====================================================
+        // MOBILE MENU
+        // =====================================================
+
+        mobileMenuButton.addEventListener(
             "click",
             () => {
 
                 const isOpen =
-                    navLinks.classList.toggle(
-                        "open"
+                    navLinks
+                        .classList
+                        .toggle(
+                            "open"
+                        );
+
+
+                mobileMenuButton
+                    .setAttribute(
+                        "aria-expanded",
+                        String(isOpen)
                     );
-
-
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    String(isOpen)
-                );
 
             }
         );
@@ -140,7 +191,7 @@ document.addEventListener(
                                 );
 
 
-                            menuToggle
+                            mobileMenuButton
                                 .setAttribute(
                                     "aria-expanded",
                                     "false"
@@ -153,142 +204,284 @@ document.addEventListener(
             );
 
 
-        // ==================================================
-        // LIVE HERO DEMO
-        // ==================================================
+        // =====================================================
+        // PRODUCT IMAGE GALLERY
+        // =====================================================
 
-        let demoRunning =
+        galleryThumbnails.forEach(
+            (thumbnail) => {
+
+                thumbnail.addEventListener(
+                    "click",
+                    () => {
+
+                        galleryThumbnails
+                            .forEach(
+                                (item) => {
+
+                                    item
+                                        .classList
+                                        .remove(
+                                            "active"
+                                        );
+
+                                }
+                            );
+
+
+                        thumbnail
+                            .classList
+                            .add(
+                                "active"
+                            );
+
+
+                        galleryImage.style.opacity =
+                            "0";
+
+
+                        setTimeout(
+                            () => {
+
+                                galleryImage.src =
+                                    thumbnail.dataset.image;
+
+
+                                galleryLabel.textContent =
+                                    thumbnail.dataset.label;
+
+
+                                galleryTitle.textContent =
+                                    thumbnail.dataset.title;
+
+
+                                galleryDescription.textContent =
+                                    thumbnail.dataset.description;
+
+
+                                galleryImage.style.opacity =
+                                    "1";
+
+                            },
+                            180
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+        // =====================================================
+        // PERFORMANCE COUNTERS
+        // =====================================================
+
+        let countersAnimated =
             false;
 
 
-        launchDemo.addEventListener(
+        function animateCounters() {
+
+            if (
+                countersAnimated
+            ) {
+                return;
+            }
+
+
+            countersAnimated =
+                true;
+
+
+            counters.forEach(
+                (counter) => {
+
+                    const target =
+                        Number(
+                            counter.dataset.target
+                        );
+
+
+                    const decimals =
+                        Number(
+                            counter.dataset.decimals ||
+                            0
+                        );
+
+
+                    const duration =
+                        1300;
+
+
+                    const startTime =
+                        performance.now();
+
+
+                    function updateCounter(
+                        currentTime
+                    ) {
+
+                        const elapsed =
+                            currentTime -
+                            startTime;
+
+
+                        const progress =
+                            Math.min(
+                                elapsed /
+                                duration,
+                                1
+                            );
+
+
+                        const eased =
+                            1 -
+                            Math.pow(
+                                1 - progress,
+                                3
+                            );
+
+
+                        const value =
+                            target *
+                            eased;
+
+
+                        counter.textContent =
+                            value.toFixed(
+                                decimals
+                            );
+
+
+                        if (
+                            progress < 1
+                        ) {
+
+                            requestAnimationFrame(
+                                updateCounter
+                            );
+
+                        }
+
+                    }
+
+
+                    requestAnimationFrame(
+                        updateCounter
+                    );
+
+                }
+            );
+
+        }
+
+
+        // =====================================================
+        // BENCHMARK DEMO
+        // =====================================================
+
+        let benchmarkRunning =
+            false;
+
+
+        benchmarkButton.addEventListener(
             "click",
             () => {
 
-                if (demoRunning) {
+                if (
+                    benchmarkRunning
+                ) {
                     return;
                 }
 
 
-                demoRunning =
+                benchmarkRunning =
                     true;
 
 
-                launchDemo.disabled =
+                benchmarkButton.disabled =
                     true;
 
 
-                launchDemo.innerHTML =
-                    `
-                        <span class="play-icon">
-                            •
-                        </span>
-                        Launching...
-                    `;
+                benchmarkButton.textContent =
+                    "Testing system...";
 
 
-                demoStatus.textContent =
-                    "Initializing automation sequence...";
+                benchmarkResult.textContent =
+                    "Initializing Rocket One performance test...";
 
 
-                momentumBar.style.width =
-                    "82%";
-
-
-                momentumValue.textContent =
-                    "82%";
+                cpuMeter.style.width =
+                    "42%";
 
 
                 setTimeout(
                     () => {
 
-                        demoStatus.textContent =
-                            "Analyzing priority queue...";
+                        benchmarkResult.textContent =
+                            "Testing sustained multi-core workload...";
 
-                        focusScore.textContent =
-                            "96";
 
-                        momentumBar.style.width =
-                            "89%";
-
-                        momentumValue.textContent =
-                            "89%";
+                        cpuMeter.style.width =
+                            "73%";
 
                     },
-                    700
+                    650
                 );
 
 
                 setTimeout(
                     () => {
 
-                        demoStatus.textContent =
-                            "Automating routine tasks...";
+                        benchmarkResult.textContent =
+                            "Testing memory and NVMe throughput...";
 
-                        automationCount.textContent =
-                            "27";
 
-                        momentumBar.style.width =
-                            "96%";
-
-                        momentumValue.textContent =
-                            "96%";
+                        cpuMeter.style.width =
+                            "91%";
 
                     },
-                    1450
+                    1350
                 );
 
 
                 setTimeout(
                     () => {
 
-                        demoStatus.textContent =
-                            "Launch complete. Workflow operating at full momentum.";
+                        benchmarkResult.textContent =
+                            "Performance test complete · Rocket One operating at full capability.";
 
-                        momentumBar.style.width =
+
+                        cpuMeter.style.width =
                             "100%";
 
-                        momentumValue.textContent =
-                            "100%";
 
-                        focusScore.textContent =
-                            "98";
-
-                        automationCount.textContent =
-                            "31";
-
-
-                        launchDemo.innerHTML =
-                            `
-                                <span class="play-icon">
-                                    ✓
-                                </span>
-                                Demo Complete
-                            `;
+                        benchmarkButton.textContent =
+                            "Test complete";
 
 
                         showToast(
-                            "Rocket launch sequence complete."
+                            "Rocket One benchmark complete."
                         );
 
 
                         setTimeout(
                             () => {
 
-                                launchDemo.disabled =
+                                benchmarkButton.disabled =
                                     false;
 
 
-                                launchDemo.innerHTML =
-                                    `
-                                        <span class="play-icon">
-                                            ▶
-                                        </span>
-                                        Run Live Demo
-                                    `;
+                                benchmarkButton.textContent =
+                                    "Run performance demo";
 
 
-                                demoRunning =
+                                cpuMeter.style.width =
+                                    "88%";
+
+
+                                benchmarkRunning =
                                     false;
 
                             },
@@ -296,97 +489,200 @@ document.addEventListener(
                         );
 
                     },
-                    2300
+                    2200
                 );
 
             }
         );
 
 
-        // ==================================================
-        // PRICING TOGGLE
-        // ==================================================
+        // =====================================================
+        // CONFIGURATOR STATE
+        // =====================================================
 
-        function updatePricing(
-            billing
-        ) {
+        const configuration = {
+            basePrice: 899,
 
-            priceValues.forEach(
-                (price) => {
+            memory: {
+                name: "32 GB",
+                price: 0
+            },
 
-                    price.textContent =
-                        price.dataset[
-                            billing
-                        ];
-
-                }
-            );
-
-
-            monthlyToggle
-                .classList
-                .toggle(
-                    "active",
-                    billing ===
-                    "monthly"
-                );
+            storage: {
+                name: "1 TB",
+                price: 0
+            }
+        };
 
 
-            annualToggle
-                .classList
-                .toggle(
-                    "active",
-                    billing ===
-                    "annual"
-                );
+        function updateConfiguration() {
+
+            const price =
+                configuration.basePrice +
+                configuration.memory.price +
+                configuration.storage.price;
+
+
+            configurationSummary.textContent =
+                `${configuration.memory.name} · ${configuration.storage.name}`;
+
+
+            totalPrice.textContent =
+                price.toLocaleString();
 
         }
 
 
-        monthlyToggle.addEventListener(
+        function setupConfigGroup(
+            container,
+            type
+        ) {
+
+            container.addEventListener(
+                "click",
+                (event) => {
+
+                    const option =
+                        event.target.closest(
+                            ".config-option"
+                        );
+
+
+                    if (
+                        !option
+                    ) {
+                        return;
+                    }
+
+
+                    container
+                        .querySelectorAll(
+                            ".config-option"
+                        )
+                        .forEach(
+                            (item) => {
+
+                                item
+                                    .classList
+                                    .remove(
+                                        "active"
+                                    );
+
+                            }
+                        );
+
+
+                    option
+                        .classList
+                        .add(
+                            "active"
+                        );
+
+
+                    if (
+                        type ===
+                        "memory"
+                    ) {
+
+                        configuration.memory = {
+                            name:
+                                option.dataset.memory,
+
+                            price:
+                                Number(
+                                    option.dataset.price
+                                )
+                        };
+
+                    }
+
+
+                    if (
+                        type ===
+                        "storage"
+                    ) {
+
+                        configuration.storage = {
+                            name:
+                                option.dataset.storage,
+
+                            price:
+                                Number(
+                                    option.dataset.price
+                                )
+                        };
+
+                    }
+
+
+                    updateConfiguration();
+
+                }
+            );
+
+        }
+
+
+        setupConfigGroup(
+            memoryOptions,
+            "memory"
+        );
+
+
+        setupConfigGroup(
+            storageOptions,
+            "storage"
+        );
+
+
+        // =====================================================
+        // BUY / RESERVE BUTTON
+        // =====================================================
+
+        buyButton.addEventListener(
             "click",
             () => {
 
-                updatePricing(
-                    "monthly"
+                const currentPrice =
+                    configuration.basePrice +
+                    configuration.memory.price +
+                    configuration.storage.price;
+
+
+                showToast(
+                    `Rocket One · ${configuration.memory.name} · ${configuration.storage.name} · $${currentPrice.toLocaleString()} selected.`
                 );
 
             }
         );
 
 
-        annualToggle.addEventListener(
-            "click",
-            () => {
+        // =====================================================
+        // SPECIFICATION ACCORDION
+        // =====================================================
 
-                updatePricing(
-                    "annual"
-                );
-
-            }
-        );
+        const specButtons =
+            document.querySelectorAll(
+                ".spec-button"
+            );
 
 
-        // ==================================================
-        // FAQ ACCORDION
-        // ==================================================
-
-        faqButtons.forEach(
+        specButtons.forEach(
             (button) => {
 
                 button.addEventListener(
                     "click",
                     () => {
 
-                        const faqItem =
+                        const row =
                             button.closest(
-                                ".faq-item"
+                                ".spec-row"
                             );
 
 
-                        const answer =
-                            faqItem.querySelector(
-                                ".faq-answer"
+                        const detail =
+                            row.querySelector(
+                                ".spec-detail"
                             );
 
 
@@ -397,66 +693,47 @@ document.addEventListener(
 
 
                         const isOpen =
-                            faqItem.classList.contains(
+                            row.classList.contains(
                                 "open"
                             );
 
 
-                        document
-                            .querySelectorAll(
-                                ".faq-item"
-                            )
-                            .forEach(
-                                (item) => {
+                        if (
+                            isOpen
+                        ) {
 
-                                    item
-                                        .classList
-                                        .remove(
-                                            "open"
-                                        );
+                            row
+                                .classList
+                                .remove(
+                                    "open"
+                                );
 
 
-                                    item
-                                        .querySelector(
-                                            ".faq-answer"
-                                        )
-                                        .style
-                                        .maxHeight =
-                                        null;
+                            detail.style.maxHeight =
+                                null;
 
 
-                                    item
-                                        .querySelector(
-                                            ".faq-question"
-                                        )
-                                        .setAttribute(
-                                            "aria-expanded",
-                                            "false"
-                                        );
+                            button
+                                .setAttribute(
+                                    "aria-expanded",
+                                    "false"
+                                );
 
 
-                                    item
-                                        .querySelector(
-                                            ".faq-question b"
-                                        )
-                                        .textContent =
-                                        "+";
+                            symbol.textContent =
+                                "+";
 
-                                }
-                            );
+                        } else {
 
-
-                        if (!isOpen) {
-
-                            faqItem
+                            row
                                 .classList
                                 .add(
                                     "open"
                                 );
 
 
-                            answer.style.maxHeight =
-                                `${answer.scrollHeight}px`;
+                            detail.style.maxHeight =
+                                `${detail.scrollHeight}px`;
 
 
                             button
@@ -478,43 +755,115 @@ document.addEventListener(
         );
 
 
-        // ==================================================
-        // PRICING BUTTONS
-        // ==================================================
+        // =====================================================
+        // FAQ ACCORDION
+        // =====================================================
 
-        planButtons.forEach(
+        const faqButtons =
+            document.querySelectorAll(
+                ".faq-question"
+            );
+
+
+        faqButtons.forEach(
             (button) => {
 
                 button.addEventListener(
                     "click",
                     () => {
 
-                        const plan =
-                            button
-                                .closest(
-                                    ".pricing-card"
-                                )
-                                .querySelector(
-                                    ".plan-name"
-                                )
-                                .textContent
-                                .trim();
+                        const item =
+                            button.closest(
+                                ".faq-item"
+                            );
+
+
+                        const answer =
+                            item.querySelector(
+                                ".faq-answer"
+                            );
+
+
+                        const icon =
+                            button.querySelector(
+                                "b"
+                            );
+
+
+                        const isOpen =
+                            item.classList.contains(
+                                "open"
+                            );
+
+
+                        document
+                            .querySelectorAll(
+                                ".faq-item"
+                            )
+                            .forEach(
+                                (faqItem) => {
+
+                                    faqItem
+                                        .classList
+                                        .remove(
+                                            "open"
+                                        );
+
+
+                                    faqItem
+                                        .querySelector(
+                                            ".faq-answer"
+                                        )
+                                        .style
+                                        .maxHeight =
+                                        null;
+
+
+                                    faqItem
+                                        .querySelector(
+                                            ".faq-question"
+                                        )
+                                        .setAttribute(
+                                            "aria-expanded",
+                                            "false"
+                                        );
+
+
+                                    faqItem
+                                        .querySelector(
+                                            ".faq-question b"
+                                        )
+                                        .textContent =
+                                        "+";
+
+                                }
+                            );
 
 
                         if (
-                            plan ===
-                            "Scale"
+                            !isOpen
                         ) {
 
-                            showToast(
-                                "Sales request started for Rocket Scale."
-                            );
+                            item
+                                .classList
+                                .add(
+                                    "open"
+                                );
 
-                        } else {
 
-                            showToast(
-                                `${plan} selected. Your launch is ready.`
-                            );
+                            answer.style.maxHeight =
+                                `${answer.scrollHeight}px`;
+
+
+                            button
+                                .setAttribute(
+                                    "aria-expanded",
+                                    "true"
+                                );
+
+
+                            icon.textContent =
+                                "−";
 
                         }
 
@@ -525,81 +874,109 @@ document.addEventListener(
         );
 
 
-        // ==================================================
-        // SCROLL REVEAL
-        // ==================================================
+        // =====================================================
+        // PRODUCT TOUR MODAL
+        // =====================================================
 
-        if (
-            "IntersectionObserver"
-            in window
-        ) {
+        function openModal() {
 
-            const observer =
-                new IntersectionObserver(
-                    (entries) => {
-
-                        entries.forEach(
-                            (entry) => {
-
-                                if (
-                                    entry.isIntersecting
-                                ) {
-
-                                    entry.target
-                                        .classList
-                                        .add(
-                                            "visible"
-                                        );
-
-
-                                    observer
-                                        .unobserve(
-                                            entry.target
-                                        );
-
-                                }
-
-                            }
-                        );
-
-                    },
-                    {
-                        threshold:
-                            0.12
-                    }
+            productModal
+                .classList
+                .add(
+                    "open"
                 );
 
 
-            revealElements.forEach(
-                (element) => {
+            productModal
+                .setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
 
-                    observer.observe(
-                        element
-                    );
 
-                }
-            );
-
-        } else {
-
-            revealElements.forEach(
-                (element) => {
-
-                    element
-                        .classList
-                        .add(
-                            "visible"
-                        );
-
-                }
-            );
+            document.body
+                .classList
+                .add(
+                    "modal-open"
+                );
 
         }
 
 
-        // ==================================================
+        function closeModal() {
+
+            productModal
+                .classList
+                .remove(
+                    "open"
+                );
+
+
+            productModal
+                .setAttribute(
+                    "aria-hidden",
+                    "true"
+                );
+
+
+            document.body
+                .classList
+                .remove(
+                    "modal-open"
+                );
+
+        }
+
+
+        tourButton.addEventListener(
+            "click",
+            openModal
+        );
+
+
+        modalClose.addEventListener(
+            "click",
+            closeModal
+        );
+
+
+        modalBackdrop.addEventListener(
+            "click",
+            closeModal
+        );
+
+
+        modalConfigure.addEventListener(
+            "click",
+            closeModal
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            (event) => {
+
+                if (
+                    event.key ===
+                    "Escape" &&
+                    productModal
+                        .classList
+                        .contains(
+                            "open"
+                        )
+                ) {
+
+                    closeModal();
+
+                }
+
+            }
+        );
+
+
+        // =====================================================
         // TOAST
-        // ==================================================
+        // =====================================================
 
         let toastTimer;
 
@@ -635,10 +1012,142 @@ document.addEventListener(
                             );
 
                     },
-                    2400
+                    2500
                 );
 
         }
+
+
+        // =====================================================
+        // SCROLL REVEALS
+        // =====================================================
+
+        if (
+            "IntersectionObserver"
+            in window
+        ) {
+
+            const revealObserver =
+                new IntersectionObserver(
+                    (entries) => {
+
+                        entries.forEach(
+                            (entry) => {
+
+                                if (
+                                    entry.isIntersecting
+                                ) {
+
+                                    entry.target
+                                        .classList
+                                        .add(
+                                            "visible"
+                                        );
+
+
+                                    revealObserver
+                                        .unobserve(
+                                            entry.target
+                                        );
+
+                                }
+
+                            }
+                        );
+
+                    },
+                    {
+                        threshold: 0.12
+                    }
+                );
+
+
+            revealElements.forEach(
+                (element) => {
+
+                    revealObserver.observe(
+                        element
+                    );
+
+                }
+            );
+
+
+            const performanceSection =
+                document.querySelector(
+                    ".performance-dashboard"
+                );
+
+
+            const counterObserver =
+                new IntersectionObserver(
+                    (entries) => {
+
+                        entries.forEach(
+                            (entry) => {
+
+                                if (
+                                    entry.isIntersecting
+                                ) {
+
+                                    animateCounters();
+
+
+                                    counterObserver
+                                        .disconnect();
+
+                                }
+
+                            }
+                        );
+
+                    },
+                    {
+                        threshold: 0.25
+                    }
+                );
+
+
+            if (
+                performanceSection
+            ) {
+
+                counterObserver.observe(
+                    performanceSection
+                );
+
+            }
+
+        } else {
+
+            revealElements.forEach(
+                (element) => {
+
+                    element
+                        .classList
+                        .add(
+                            "visible"
+                        );
+
+                }
+            );
+
+
+            animateCounters();
+
+        }
+
+
+        // =====================================================
+        // INITIAL STATE
+        // =====================================================
+
+        updateConfiguration();
+
+
+        console.log(
+            "Rocket One initialization complete."
+        );
 
     }
 );
