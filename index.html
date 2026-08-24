@@ -10,20 +10,17 @@
 
     <meta
         name="description"
-        content="Rocket Product is a modern productivity command center for projects, automation, analytics, and focused work."
+        content="Rocket One is a premium compact performance hub built for creators, developers, and demanding modern workspaces."
     >
 
     <meta
         name="theme-color"
-        content="#05070b"
+        content="#080909"
     >
 
-    <title>Rocket Product | Work at Launch Speed</title>
+    <title>Rocket One | Power Without the Footprint</title>
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link
         rel="preconnect"
@@ -38,51 +35,52 @@
 
     <link
         rel="stylesheet"
-        href="styles.css?v=2.0.0"
+        href="styles.css?v=3.0.0"
     >
 </head>
 
 <body>
 
-    <div class="page-noise"></div>
-    <div class="background-orb orb-one"></div>
-    <div class="background-orb orb-two"></div>
+    <div class="noise-overlay"></div>
+
+    <div
+        id="toast"
+        class="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
 
 
-    <!-- ==================================================
-         NAVIGATION
-    =================================================== -->
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
     <header class="site-header">
 
         <nav class="navbar">
 
             <a
-                class="brand"
                 href="#home"
-                aria-label="Rocket Product home"
+                class="brand"
+                aria-label="Rocket home"
             >
-
-                <span class="brand-icon">
-                    ↗
+                <span class="brand-symbol">
+                    R
                 </span>
 
-                <span class="brand-text">
-                    <strong>Rocket</strong>
-                    <small>PRODUCT</small>
+                <span class="brand-name">
+                    Rocket
                 </span>
-
             </a>
 
 
             <button
-                id="menu-toggle"
-                class="menu-toggle"
+                id="mobile-menu-button"
+                class="mobile-menu-button"
                 type="button"
-                aria-label="Open navigation menu"
+                aria-label="Open navigation"
                 aria-expanded="false"
             >
-                <span></span>
                 <span></span>
                 <span></span>
             </button>
@@ -92,36 +90,33 @@
                 id="nav-links"
                 class="nav-links"
             >
-
-                <a href="#features">
-                    Features
+                <a href="#product">
+                    Product
                 </a>
 
-                <a href="#workflow">
-                    How It Works
+                <a href="#performance">
+                    Performance
                 </a>
 
-                <a href="#reviews">
-                    Reviews
+                <a href="#design">
+                    Design
                 </a>
 
-                <a href="#pricing">
-                    Pricing
+                <a href="#specs">
+                    Specs
                 </a>
 
-                <a href="#faq">
-                    FAQ
+                <a href="#configure">
+                    Configure
                 </a>
-
             </div>
 
 
             <a
-                class="nav-cta"
-                href="#pricing"
+                href="#configure"
+                class="nav-buy-button"
             >
-                Get Started
-                <span>→</span>
+                Buy Rocket One
             </a>
 
         </nav>
@@ -131,82 +126,78 @@
 
     <main>
 
-        <!-- ==================================================
+
+        <!-- =====================================================
              HERO
-        =================================================== -->
+        ====================================================== -->
 
         <section
             id="home"
-            class="hero section"
+            class="hero-section"
         >
 
-            <div class="hero-content reveal">
+            <div class="hero-copy reveal">
 
                 <div class="eyebrow">
-
-                    <span class="pulse-dot"></span>
-
-                    The productivity system built for momentum
-
+                    ROCKET ONE
+                    <span>NEW</span>
                 </div>
 
 
                 <h1>
-                    Turn scattered work into
-                    <span>one launch sequence.</span>
+                    Massive power.
+                    <span>Minimal footprint.</span>
                 </h1>
 
 
                 <p class="hero-description">
-                    Rocket Product combines projects, automation,
-                    analytics, and daily priorities into one focused
-                    command center built to keep work moving.
+                    A compact performance hub engineered for
+                    developers, creators, and modern workspaces
+                    that refuse to compromise.
                 </p>
 
 
                 <div class="hero-actions">
 
                     <a
+                        href="#configure"
                         class="primary-button"
-                        href="#pricing"
                     >
-                        Start Building Momentum
+                        Configure yours
                         <span>→</span>
                     </a>
 
 
                     <button
-                        id="launch-demo"
+                        id="tour-button"
                         class="secondary-button"
                         type="button"
                     >
-
-                        <span class="play-icon">
+                        <span class="play-button">
                             ▶
                         </span>
 
-                        Run Live Demo
-
+                        Product tour
                     </button>
 
                 </div>
 
 
-                <div class="hero-proof">
+                <div class="hero-meta">
 
                     <div>
-                        <strong>10x</strong>
-                        <span>Faster workflows</span>
+                        <span>Starting at</span>
+                        <strong>$899</strong>
                     </div>
 
                     <div>
-                        <strong>99.99%</strong>
-                        <span>Platform uptime</span>
+                        <span>Ships</span>
+                        <strong>Free</strong>
                     </div>
 
                     <div>
-                        <strong>24/7</strong>
-                        <span>Workflow automation</span>
+                        <span>Warranty</span>
+                        <strong>3 Years</strong>
                     </div>
 
                 </div>
@@ -214,213 +205,356 @@
             </div>
 
 
-            <!-- PRODUCT DASHBOARD MOCKUP -->
+            <div class="hero-visual reveal">
 
-            <div class="hero-product reveal">
+                <div class="hero-glow"></div>
 
-                <div class="product-glow"></div>
+                <img
+                    src="images/rocket-hero.png"
+                    alt="Rocket One compact performance hub"
+                >
+
+                <div class="floating-spec spec-one">
+                    <span>USB-C</span>
+                    <strong>40 Gbps</strong>
+                </div>
+
+                <div class="floating-spec spec-two">
+                    <span>Memory</span>
+                    <strong>Up to 64 GB</strong>
+                </div>
+
+            </div>
+
+        </section>
 
 
-                <div class="dashboard">
+        <!-- =====================================================
+             QUICK VALUE STRIP
+        ====================================================== -->
 
-                    <div class="dashboard-top">
+        <section class="value-strip">
 
-                        <div>
+            <div>
+                <strong>4.8 GHz</strong>
+                <span>Peak performance</span>
+            </div>
 
-                            <span class="dashboard-label">
-                                MISSION CONTROL
+            <div>
+                <strong>64 GB</strong>
+                <span>Unified memory</span>
+            </div>
+
+            <div>
+                <strong>4 TB</strong>
+                <span>NVMe storage</span>
+            </div>
+
+            <div>
+                <strong>40 Gbps</strong>
+                <span>High-speed I/O</span>
+            </div>
+
+            <div>
+                <strong>18 dBA</strong>
+                <span>Near-silent operation</span>
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PRODUCT INTRO
+        ====================================================== -->
+
+        <section
+            id="product"
+            class="section product-intro"
+        >
+
+            <div class="section-heading centered reveal">
+
+                <span class="section-label">
+                    MEET ROCKET ONE
+                </span>
+
+                <h2>
+                    Your entire workstation
+                    <span>rethought.</span>
+                </h2>
+
+                <p>
+                    Rocket One combines serious desktop-class
+                    performance with a compact industrial design
+                    built to disappear into your workspace until
+                    you need it.
+                </p>
+
+            </div>
+
+
+            <!-- INTERACTIVE GALLERY -->
+
+            <div class="product-gallery reveal">
+
+                <div class="gallery-main">
+
+                    <img
+                        id="gallery-image"
+                        src="images/rocket-hero.png"
+                        alt="Rocket One product view"
+                    >
+
+                    <div class="gallery-caption">
+
+                        <span id="gallery-label">
+                            PRODUCT
+                        </span>
+
+                        <strong id="gallery-title">
+                            Rocket One
+                        </strong>
+
+                        <p id="gallery-description">
+                            Precision-machined performance in a
+                            remarkably compact form.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-thumbnails">
+
+                    <button
+                        class="gallery-thumb active"
+                        type="button"
+                        data-image="images/rocket-hero.png"
+                        data-label="PRODUCT"
+                        data-title="Rocket One"
+                        data-description="Precision-machined performance in a remarkably compact form."
+                    >
+                        <img
+                            src="images/rocket-hero.png"
+                            alt=""
+                        >
+
+                        <span>
+                            Full view
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="gallery-thumb"
+                        type="button"
+                        data-image="images/rocket-detail.png"
+                        data-label="DETAIL"
+                        data-title="Engineered up close"
+                        data-description="Every vent, port, surface, and illuminated detail was designed with purpose."
+                    >
+                        <img
+                            src="images/rocket-detail.png"
+                            alt=""
+                        >
+
+                        <span>
+                            Detail
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="gallery-thumb"
+                        type="button"
+                        data-image="images/rocket-lifestyle.png"
+                        data-label="WORKSPACE"
+                        data-title="Built to belong"
+                        data-description="Powerful enough to anchor the setup. Refined enough to disappear into it."
+                    >
+                        <img
+                            src="images/rocket-lifestyle.png"
+                            alt=""
+                        >
+
+                        <span>
+                            In use
+                        </span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PERFORMANCE
+        ====================================================== -->
+
+        <section
+            id="performance"
+            class="performance-section"
+        >
+
+            <div class="section performance-inner">
+
+                <div class="performance-copy reveal">
+
+                    <span class="section-label">
+                        PERFORMANCE
+                    </span>
+
+                    <h2>
+                        Small machine.
+                        <span>Serious numbers.</span>
+                    </h2>
+
+                    <p>
+                        Rocket One is designed for development,
+                        creative workloads, virtualization,
+                        multitasking, and demanding daily use
+                        without turning your desk into a server room.
+                    </p>
+
+
+                    <button
+                        id="benchmark-button"
+                        class="outline-button"
+                        type="button"
+                    >
+                        Run performance demo
+                    </button>
+
+                </div>
+
+
+                <div class="performance-dashboard reveal">
+
+                    <div class="performance-card performance-primary">
+
+                        <span>
+                            Compute performance
+                        </span>
+
+                        <strong>
+                            <span
+                                class="counter"
+                                data-target="4.8"
+                                data-decimals="1"
+                            >
+                                0
                             </span>
+                            GHz
+                        </strong>
 
-                            <h2>
-                                Monday Launch Plan
-                            </h2>
-
+                        <div class="meter">
+                            <div
+                                id="cpu-meter"
+                                class="meter-fill"
+                                style="width: 88%"
+                            ></div>
                         </div>
 
-
-                        <div class="status-pill">
-                            <span></span>
-                            Live
-                        </div>
+                        <small>
+                            Multi-core boost architecture
+                        </small>
 
                     </div>
 
 
-                    <div class="dashboard-grid">
+                    <div class="performance-small-grid">
 
+                        <div class="performance-card">
 
-                        <div class="dashboard-main">
+                            <span>
+                                Memory
+                            </span>
 
-                            <div class="progress-header">
-
-                                <span>
-                                    Weekly momentum
+                            <strong>
+                                <span
+                                    class="counter"
+                                    data-target="64"
+                                >
+                                    0
                                 </span>
+                                GB
+                            </strong>
 
-                                <strong id="momentum-value">
-                                    74%
-                                </strong>
-
-                            </div>
-
-
-                            <div class="progress-bar">
-
-                                <div
-                                    id="momentum-bar"
-                                    class="progress-fill"
-                                ></div>
-
-                            </div>
-
-
-                            <div class="mission-list">
-
-
-                                <div class="mission-item complete">
-
-                                    <span class="mission-check">
-                                        ✓
-                                    </span>
-
-                                    <div>
-
-                                        <strong>
-                                            Launch campaign
-                                        </strong>
-
-                                        <small>
-                                            Marketing
-                                        </small>
-
-                                    </div>
-
-                                    <span class="mission-time">
-                                        Done
-                                    </span>
-
-                                </div>
-
-
-                                <div class="mission-item active">
-
-                                    <span class="mission-check">
-                                        02
-                                    </span>
-
-                                    <div>
-
-                                        <strong>
-                                            Product analytics
-                                        </strong>
-
-                                        <small>
-                                            Growth dashboard
-                                        </small>
-
-                                    </div>
-
-                                    <span class="mission-time">
-                                        12 min
-                                    </span>
-
-                                </div>
-
-
-                                <div class="mission-item">
-
-                                    <span class="mission-check">
-                                        03
-                                    </span>
-
-                                    <div>
-
-                                        <strong>
-                                            Review sprint
-                                        </strong>
-
-                                        <small>
-                                            Engineering
-                                        </small>
-
-                                    </div>
-
-                                    <span class="mission-time">
-                                        28 min
-                                    </span>
-
-                                </div>
-
-                            </div>
+                            <small>
+                                DDR5
+                            </small>
 
                         </div>
 
 
-                        <div class="dashboard-side">
+                        <div class="performance-card">
 
+                            <span>
+                                Storage
+                            </span>
 
-                            <div class="metric-card orange">
-
-                                <span>
-                                    Focus score
+                            <strong>
+                                <span
+                                    class="counter"
+                                    data-target="4"
+                                >
+                                    0
                                 </span>
+                                TB
+                            </strong>
 
-                                <strong id="focus-score">
-                                    92
-                                </strong>
+                            <small>
+                                NVMe
+                            </small>
 
-                                <small>
-                                    +14 this week
-                                </small>
-
-                            </div>
+                        </div>
 
 
-                            <div class="metric-card">
+                        <div class="performance-card">
 
-                                <span>
-                                    Automated
+                            <span>
+                                Transfer
+                            </span>
+
+                            <strong>
+                                <span
+                                    class="counter"
+                                    data-target="40"
+                                >
+                                    0
                                 </span>
+                                Gbps
+                            </strong>
 
-                                <strong id="automation-count">
-                                    18
-                                </strong>
+                            <small>
+                                USB4
+                            </small>
 
-                                <small>
-                                    tasks today
-                                </small>
-
-                            </div>
+                        </div>
 
 
-                            <div class="mini-chart">
+                        <div class="performance-card">
 
-                                <div class="chart-header">
+                            <span>
+                                Acoustic
+                            </span>
 
-                                    <span>
-                                        Output
-                                    </span>
+                            <strong>
+                                <span
+                                    class="counter"
+                                    data-target="18"
+                                >
+                                    0
+                                </span>
+                                dBA
+                            </strong>
 
-                                    <strong>
-                                        +38%
-                                    </strong>
-
-                                </div>
-
-
-                                <div class="bars">
-
-                                    <span style="height: 32%"></span>
-                                    <span style="height: 46%"></span>
-                                    <span style="height: 41%"></span>
-                                    <span style="height: 65%"></span>
-                                    <span style="height: 58%"></span>
-                                    <span style="height: 82%"></span>
-                                    <span style="height: 94%"></span>
-
-                                </div>
-
-                            </div>
+                            <small>
+                                Quiet mode
+                            </small>
 
                         </div>
 
@@ -428,10 +562,10 @@
 
 
                     <div
-                        id="demo-status"
-                        class="demo-status"
+                        id="benchmark-result"
+                        class="benchmark-result"
                     >
-                        System ready. Launch sequence standing by.
+                        System standing by.
                     </div>
 
                 </div>
@@ -441,935 +575,820 @@
         </section>
 
 
-        <!-- ==================================================
-             LOGO / TRUST STRIP
-        =================================================== -->
+        <!-- =====================================================
+             DESIGN DETAIL
+        ====================================================== -->
 
-        <section class="trust-strip">
+        <section
+            id="design"
+            class="section design-section"
+        >
 
-            <span>
-                Built for teams that refuse to move slowly
-            </span>
+            <div class="design-image reveal">
 
-            <div class="company-list">
+                <img
+                    src="images/rocket-detail.png"
+                    alt="Close detail of Rocket One ports and illuminated chassis"
+                >
 
-                <strong>APEX</strong>
-                <strong>VECTOR</strong>
-                <strong>NOVA</strong>
-                <strong>ORBIT</strong>
-                <strong>SUMMIT</strong>
+                <div class="detail-tag detail-tag-one">
+                    <span>01</span>
+                    Precision airflow
+                </div>
+
+                <div class="detail-tag detail-tag-two">
+                    <span>02</span>
+                    High-speed I/O
+                </div>
+
+            </div>
+
+
+            <div class="design-copy reveal">
+
+                <span class="section-label">
+                    DESIGNED WITH INTENT
+                </span>
+
+                <h2>
+                    Built like equipment.
+                    <span>Finished like furniture.</span>
+                </h2>
+
+                <p>
+                    The matte graphite enclosure is engineered
+                    around airflow, durability, and clean desk
+                    presence. The continuous amber light rail
+                    provides system status without turning Rocket
+                    One into a distraction.
+                </p>
+
+
+                <div class="design-points">
+
+                    <article>
+                        <span>01</span>
+
+                        <div>
+                            <strong>
+                                Anodized metal enclosure
+                            </strong>
+
+                            <p>
+                                Durable, understated, and engineered
+                                to dissipate heat efficiently.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <article>
+                        <span>02</span>
+
+                        <div>
+                            <strong>
+                                Tuned thermal architecture
+                            </strong>
+
+                            <p>
+                                Side and lower venting keeps airflow
+                                moving without excessive fan noise.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <article>
+                        <span>03</span>
+
+                        <div>
+                            <strong>
+                                Front-access connectivity
+                            </strong>
+
+                            <p>
+                                High-speed USB-C and USB-A ports
+                                stay accessible without cable clutter.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
 
             </div>
 
         </section>
 
 
-        <!-- ==================================================
-             FEATURES
-        =================================================== -->
+        <!-- =====================================================
+             LIFESTYLE
+        ====================================================== -->
 
-        <section
-            id="features"
-            class="features-section section"
-        >
+        <section class="workspace-section">
+
+            <img
+                src="images/rocket-lifestyle.png"
+                alt="Rocket One in a premium modern workspace"
+            >
+
+            <div class="workspace-overlay"></div>
+
+
+            <div class="workspace-copy reveal">
+
+                <span class="section-label">
+                    DESIGNED FOR THE DESK
+                </span>
+
+                <h2>
+                    The machine that
+                    doesn't take over the room.
+                </h2>
+
+                <p>
+                    Rocket One gives you the performance of a
+                    serious workstation without demanding the
+                    space of one.
+                </p>
+
+                <a
+                    href="#configure"
+                    class="light-button"
+                >
+                    Build your Rocket One
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FEATURES
+        ====================================================== -->
+
+        <section class="section feature-section">
 
             <div class="section-heading reveal">
 
                 <span class="section-label">
-                    BUILT DIFFERENT
+                    EVERYTHING YOU NEED
                 </span>
 
                 <h2>
-                    Everything your workflow
-                    <span>actually needs.</span>
+                    Less clutter.
+                    <span>More capability.</span>
                 </h2>
-
-                <p>
-                    Fewer tabs. Fewer disconnected tools. More time
-                    spent moving important work forward.
-                </p>
 
             </div>
 
 
             <div class="feature-grid">
 
+                <article class="feature-card reveal">
 
-                <article class="feature-card feature-large reveal">
+                    <span class="feature-index">
+                        01
+                    </span>
 
                     <div class="feature-icon">
                         ⚡
                     </div>
 
-                    <span class="feature-number">
-                        01
-                    </span>
-
                     <h3>
-                        Automation Engine
+                        Instant performance
                     </h3>
 
                     <p>
-                        Build workflows that move repetitive work
-                        automatically while keeping your team focused
-                        on decisions that actually matter.
+                        Fast startup, responsive multitasking, and
+                        the headroom to keep demanding applications
+                        running together.
                     </p>
-
-
-                    <div class="automation-preview">
-
-                        <div class="automation-row">
-
-                            <span class="automation-dot"></span>
-
-                            New project created
-
-                        </div>
-
-
-                        <div class="automation-line"></div>
-
-
-                        <div class="automation-row">
-
-                            <span class="automation-icon">
-                                ↯
-                            </span>
-
-                            Assign team automatically
-
-                        </div>
-
-
-                        <div class="automation-line"></div>
-
-
-                        <div class="automation-row success">
-
-                            <span>
-                                ✓
-                            </span>
-
-                            Workflow launched
-
-                        </div>
-
-                    </div>
 
                 </article>
 
 
                 <article class="feature-card reveal">
 
-                    <div class="feature-icon">
-                        ◎
-                    </div>
-
-                    <span class="feature-number">
+                    <span class="feature-index">
                         02
                     </span>
 
+                    <div class="feature-icon">
+                        ◉
+                    </div>
+
                     <h3>
-                        Focus Intelligence
+                        Quiet by design
                     </h3>
 
                     <p>
-                        See exactly what deserves attention next,
-                        based on priority, workload, timing, and
-                        project impact.
+                        Intelligent fan control keeps Rocket One
+                        cool without constantly reminding you that
+                        it is there.
                     </p>
-
-                    <div class="focus-visual">
-
-                        <div class="focus-ring">
-                            <span>92</span>
-                        </div>
-
-                        <small>
-                            Focus score
-                        </small>
-
-                    </div>
 
                 </article>
 
 
                 <article class="feature-card reveal">
 
-                    <div class="feature-icon">
-                        ◒
-                    </div>
-
-                    <span class="feature-number">
+                    <span class="feature-index">
                         03
                     </span>
 
+                    <div class="feature-icon">
+                        ⌁
+                    </div>
+
                     <h3>
-                        Live Analytics
+                        Serious connectivity
                     </h3>
 
                     <p>
-                        Understand velocity, output, bottlenecks,
-                        and progress without building another
-                        spreadsheet.
+                        High-speed USB-C, USB-A, display output,
+                        networking, and expandable workstation
+                        connectivity.
                     </p>
-
-                    <div class="analytics-bars">
-
-                        <span style="height: 38%"></span>
-                        <span style="height: 56%"></span>
-                        <span style="height: 44%"></span>
-                        <span style="height: 77%"></span>
-                        <span style="height: 66%"></span>
-                        <span style="height: 93%"></span>
-
-                    </div>
 
                 </article>
 
 
-                <article class="feature-card feature-wide reveal">
+                <article class="feature-card reveal">
+
+                    <span class="feature-index">
+                        04
+                    </span>
+
+                    <div class="feature-icon">
+                        ▣
+                    </div>
+
+                    <h3>
+                        Built to scale
+                    </h3>
+
+                    <p>
+                        Choose the memory and storage configuration
+                        you need today without paying for what
+                        you do not.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SPECIFICATIONS
+        ====================================================== -->
+
+        <section
+            id="specs"
+            class="specs-section"
+        >
+
+            <div class="section specs-inner">
+
+                <div class="specs-heading reveal">
+
+                    <span class="section-label">
+                        TECHNICAL SPECIFICATIONS
+                    </span>
+
+                    <h2>
+                        The numbers
+                        <span>behind the machine.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="spec-list reveal">
+
+
+                    <article class="spec-row">
+
+                        <button
+                            class="spec-button"
+                            type="button"
+                            aria-expanded="false"
+                        >
+                            <span>
+                                Processor
+                            </span>
+
+                            <strong>
+                                12-core performance architecture
+                            </strong>
+
+                            <b>+</b>
+                        </button>
+
+                        <div class="spec-detail">
+                            <p>
+                                Up to 4.8 GHz boost frequency,
+                                designed for parallel workloads,
+                                development, content creation,
+                                and productivity.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="spec-row">
+
+                        <button
+                            class="spec-button"
+                            type="button"
+                            aria-expanded="false"
+                        >
+                            <span>
+                                Memory
+                            </span>
+
+                            <strong>
+                                32 GB or 64 GB DDR5
+                            </strong>
+
+                            <b>+</b>
+                        </button>
+
+                        <div class="spec-detail">
+                            <p>
+                                High-bandwidth DDR5 memory designed
+                                for heavy multitasking, virtual
+                                machines, development workloads,
+                                and large creative projects.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="spec-row">
+
+                        <button
+                            class="spec-button"
+                            type="button"
+                            aria-expanded="false"
+                        >
+                            <span>
+                                Storage
+                            </span>
+
+                            <strong>
+                                1 TB, 2 TB, or 4 TB NVMe
+                            </strong>
+
+                            <b>+</b>
+                        </button>
+
+                        <div class="spec-detail">
+                            <p>
+                                PCIe NVMe solid-state storage with
+                                fast application loading, project
+                                access, and file transfers.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="spec-row">
+
+                        <button
+                            class="spec-button"
+                            type="button"
+                            aria-expanded="false"
+                        >
+                            <span>
+                                Connectivity
+                            </span>
+
+                            <strong>
+                                USB4, USB-C, USB-A, Wi-Fi 7
+                            </strong>
+
+                            <b>+</b>
+                        </button>
+
+                        <div class="spec-detail">
+                            <p>
+                                Built for modern displays,
+                                high-speed external storage,
+                                networking, peripherals, and
+                                multi-device workflows.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="spec-row">
+
+                        <button
+                            class="spec-button"
+                            type="button"
+                            aria-expanded="false"
+                        >
+                            <span>
+                                Dimensions
+                            </span>
+
+                            <strong>
+                                8.7 × 8.7 × 2.8 inches
+                            </strong>
+
+                            <b>+</b>
+                        </button>
+
+                        <div class="spec-detail">
+                            <p>
+                                A compact footprint designed to
+                                preserve desk space without
+                                sacrificing thermal capacity.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONFIGURATOR
+        ====================================================== -->
+
+        <section
+            id="configure"
+            class="section configure-section"
+        >
+
+            <div class="config-product reveal">
+
+                <span class="section-label">
+                    YOUR ROCKET ONE
+                </span>
+
+                <h2>
+                    Configure the machine
+                    you actually need.
+                </h2>
+
+                <img
+                    src="images/rocket-hero.png"
+                    alt="Configured Rocket One"
+                >
+
+                <div class="included-list">
+
+                    <span>
+                        ✓ Rocket One
+                    </span>
+
+                    <span>
+                        ✓ Power adapter
+                    </span>
+
+                    <span>
+                        ✓ 3-year limited warranty
+                    </span>
+
+                    <span>
+                        ✓ Free shipping
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="config-panel reveal">
+
+                <div class="config-step">
+
+                    <div class="config-heading">
+
+                        <span>
+                            01
+                        </span>
+
+                        <div>
+                            <strong>
+                                Memory
+                            </strong>
+
+                            <small>
+                                Choose your multitasking capacity
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="memory-options"
+                        class="config-options"
+                    >
+
+                        <button
+                            class="config-option active"
+                            type="button"
+                            data-memory="32 GB"
+                            data-price="0"
+                        >
+                            <strong>
+                                32 GB
+                            </strong>
+
+                            <span>
+                                Included
+                            </span>
+                        </button>
+
+
+                        <button
+                            class="config-option"
+                            type="button"
+                            data-memory="64 GB"
+                            data-price="300"
+                        >
+                            <strong>
+                                64 GB
+                            </strong>
+
+                            <span>
+                                +$300
+                            </span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="config-step">
+
+                    <div class="config-heading">
+
+                        <span>
+                            02
+                        </span>
+
+                        <div>
+                            <strong>
+                                Storage
+                            </strong>
+
+                            <small>
+                                Choose your internal NVMe capacity
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="storage-options"
+                        class="config-options storage-options"
+                    >
+
+                        <button
+                            class="config-option active"
+                            type="button"
+                            data-storage="1 TB"
+                            data-price="0"
+                        >
+                            <strong>
+                                1 TB
+                            </strong>
+
+                            <span>
+                                Included
+                            </span>
+                        </button>
+
+
+                        <button
+                            class="config-option"
+                            type="button"
+                            data-storage="2 TB"
+                            data-price="200"
+                        >
+                            <strong>
+                                2 TB
+                            </strong>
+
+                            <span>
+                                +$200
+                            </span>
+                        </button>
+
+
+                        <button
+                            class="config-option"
+                            type="button"
+                            data-storage="4 TB"
+                            data-price="500"
+                        >
+                            <strong>
+                                4 TB
+                            </strong>
+
+                            <span>
+                                +$500
+                            </span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="order-summary">
 
                     <div>
 
-                        <div class="feature-icon">
-                            ⌘
-                        </div>
-
-                        <span class="feature-number">
-                            04
+                        <span>
+                            Rocket One
                         </span>
 
-                        <h3>
-                            One workspace. Every mission.
-                        </h3>
-
-                        <p>
-                            Projects, notes, tasks, reporting,
-                            automation, and team visibility live
-                            together instead of being scattered
-                            across different tools.
-                        </p>
+                        <strong id="configuration-summary">
+                            32 GB · 1 TB
+                        </strong>
 
                     </div>
 
 
-                    <div class="workspace-preview">
+                    <div class="price-block">
 
-                        <div class="workspace-sidebar">
+                        <span>
+                            Total
+                        </span>
 
-                            <span class="active"></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-
-                        </div>
-
-
-                        <div class="workspace-content">
-
-                            <div></div>
-                            <div></div>
-                            <div></div>
-
-                        </div>
+                        <strong>
+                            $
+                            <span id="total-price">
+                                899
+                            </span>
+                        </strong>
 
                     </div>
 
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- ==================================================
-             WORKFLOW
-        =================================================== -->
-
-        <section
-            id="workflow"
-            class="workflow-section section"
-        >
-
-            <div class="section-heading centered reveal">
-
-                <span class="section-label">
-                    HOW IT WORKS
-                </span>
-
-                <h2>
-                    From idea to execution
-                    <span>without the drag.</span>
-                </h2>
-
-            </div>
-
-
-            <div class="workflow-grid">
-
-
-                <article class="workflow-step reveal">
-
-                    <span class="step-number">
-                        01
-                    </span>
-
-                    <div class="step-icon">
-                        +
-                    </div>
-
-                    <h3>
-                        Build
-                    </h3>
-
-                    <p>
-                        Create the project, goal, or workflow
-                        you want your team to move.
-                    </p>
-
-                </article>
-
-
-                <div class="workflow-connector">
-                    →
                 </div>
 
 
-                <article class="workflow-step reveal">
-
-                    <span class="step-number">
-                        02
-                    </span>
-
-                    <div class="step-icon">
-                        ⚡
-                    </div>
-
-                    <h3>
-                        Automate
-                    </h3>
-
-                    <p>
-                        Let Rocket handle assignments, reminders,
-                        updates, and routine actions.
-                    </p>
-
-                </article>
-
-
-                <div class="workflow-connector">
-                    →
-                </div>
-
-
-                <article class="workflow-step reveal">
-
-                    <span class="step-number">
-                        03
-                    </span>
-
-                    <div class="step-icon">
-                        ↗
-                    </div>
-
-                    <h3>
-                        Launch
-                    </h3>
-
-                    <p>
-                        Track progress in real time and keep momentum
-                        moving toward the finish line.
-                    </p>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- ==================================================
-             STATS
-        =================================================== -->
-
-        <section class="stats-section reveal">
-
-            <div>
-
-                <strong>
-                    42%
-                </strong>
-
-                <span>
-                    Less time spent on admin work
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <strong>
-                    3.8x
-                </strong>
-
-                <span>
-                    Faster project handoffs
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <strong>
-                    11 hrs
-                </strong>
-
-                <span>
-                    Saved per user each month
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <strong>
-                    4.9/5
-                </strong>
-
-                <span>
-                    Average team rating
-                </span>
-
-            </div>
-
-        </section>
-
-
-        <!-- ==================================================
-             REVIEWS
-        =================================================== -->
-
-        <section
-            id="reviews"
-            class="reviews-section section"
-        >
-
-            <div class="section-heading reveal">
-
-                <span class="section-label">
-                    WHAT TEAMS SAY
-                </span>
-
-                <h2>
-                    Built to feel
-                    <span>immediately useful.</span>
-                </h2>
-
-            </div>
-
-
-            <div class="review-grid">
-
-
-                <article class="review-card reveal">
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
-                    <p>
-                        “Rocket replaced three different tools for
-                        our team. The biggest difference is that
-                        everyone finally knows what matters next.”
-                    </p>
-
-                    <div class="review-person">
-
-                        <span>AM</span>
-
-                        <div>
-
-                            <strong>
-                                Alex Morgan
-                            </strong>
-
-                            <small>
-                                Product Operations
-                            </small>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="review-card featured-review reveal">
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
-                    <p>
-                        “The automation alone paid for the platform.
-                        We stopped chasing status updates and started
-                        spending that time actually shipping.”
-                    </p>
-
-                    <div class="review-person">
-
-                        <span>JC</span>
-
-                        <div>
-
-                            <strong>
-                                Jordan Cole
-                            </strong>
-
-                            <small>
-                                Engineering Lead
-                            </small>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="review-card reveal">
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
-                    <p>
-                        “It feels less like project management
-                        software and more like a command center for
-                        the entire company.”
-                    </p>
-
-                    <div class="review-person">
-
-                        <span>SK</span>
-
-                        <div>
-
-                            <strong>
-                                Samira King
-                            </strong>
-
-                            <small>
-                                Operations Director
-                            </small>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- ==================================================
-             PRICING
-        =================================================== -->
-
-        <section
-            id="pricing"
-            class="pricing-section section"
-        >
-
-            <div class="section-heading centered reveal">
-
-                <span class="section-label">
-                    SIMPLE PRICING
-                </span>
-
-                <h2>
-                    Start small.
-                    <span>Scale without friction.</span>
-                </h2>
-
-                <p>
-                    Everything you need to get moving.
-                    Upgrade only when your team grows.
+                <button
+                    id="buy-button"
+                    class="buy-button"
+                    type="button"
+                >
+                    Reserve Rocket One
+                    <span>→</span>
+                </button>
+
+
+                <p class="purchase-note">
+                    No payment will be processed.
+                    This is a portfolio demonstration.
                 </p>
 
             </div>
 
-
-            <div class="billing-toggle reveal">
-
-                <button
-                    id="monthly-toggle"
-                    class="billing-option active"
-                    type="button"
-                >
-                    Monthly
-                </button>
-
-                <button
-                    id="annual-toggle"
-                    class="billing-option"
-                    type="button"
-                >
-                    Annual
-
-                    <span>
-                        Save 20%
-                    </span>
-
-                </button>
-
-            </div>
-
-
-            <div class="pricing-grid">
-
-
-                <article class="pricing-card reveal">
-
-                    <span class="plan-name">
-                        Starter
-                    </span>
-
-                    <h3>
-                        For focused individuals
-                    </h3>
-
-                    <div class="price">
-
-                        <span>
-                            $
-                        </span>
-
-                        <strong
-                            class="price-value"
-                            data-monthly="12"
-                            data-annual="9"
-                        >
-                            12
-                        </strong>
-
-                        <small>
-                            / month
-                        </small>
-
-                    </div>
-
-
-                    <ul>
-
-                        <li>
-                            ✓ Unlimited projects
-                        </li>
-
-                        <li>
-                            ✓ Personal automation
-                        </li>
-
-                        <li>
-                            ✓ Productivity analytics
-                        </li>
-
-                        <li>
-                            ✓ 5 GB storage
-                        </li>
-
-                    </ul>
-
-
-                    <button
-                        class="plan-button"
-                        type="button"
-                    >
-                        Start Free
-                    </button>
-
-                </article>
-
-
-                <article class="pricing-card popular reveal">
-
-                    <div class="popular-label">
-                        MOST POPULAR
-                    </div>
-
-                    <span class="plan-name">
-                        Pro
-                    </span>
-
-                    <h3>
-                        For teams building momentum
-                    </h3>
-
-                    <div class="price">
-
-                        <span>
-                            $
-                        </span>
-
-                        <strong
-                            class="price-value"
-                            data-monthly="29"
-                            data-annual="23"
-                        >
-                            29
-                        </strong>
-
-                        <small>
-                            / user
-                        </small>
-
-                    </div>
-
-
-                    <ul>
-
-                        <li>
-                            ✓ Everything in Starter
-                        </li>
-
-                        <li>
-                            ✓ Advanced automation
-                        </li>
-
-                        <li>
-                            ✓ Team dashboards
-                        </li>
-
-                        <li>
-                            ✓ Unlimited storage
-                        </li>
-
-                        <li>
-                            ✓ Priority support
-                        </li>
-
-                    </ul>
-
-
-                    <button
-                        class="plan-button primary-plan"
-                        type="button"
-                    >
-                        Start Pro
-                    </button>
-
-                </article>
-
-
-                <article class="pricing-card reveal">
-
-                    <span class="plan-name">
-                        Scale
-                    </span>
-
-                    <h3>
-                        For larger organizations
-                    </h3>
-
-                    <div class="price enterprise-price">
-
-                        <strong>
-                            Custom
-                        </strong>
-
-                    </div>
-
-
-                    <ul>
-
-                        <li>
-                            ✓ Everything in Pro
-                        </li>
-
-                        <li>
-                            ✓ Enterprise security
-                        </li>
-
-                        <li>
-                            ✓ SSO and provisioning
-                        </li>
-
-                        <li>
-                            ✓ Dedicated onboarding
-                        </li>
-
-                    </ul>
-
-
-                    <button
-                        class="plan-button"
-                        type="button"
-                    >
-                        Contact Sales
-                    </button>
-
-                </article>
-
-            </div>
-
         </section>
 
 
-        <!-- ==================================================
+        <!-- =====================================================
              FAQ
-        =================================================== -->
+        ====================================================== -->
 
-        <section
-            id="faq"
-            class="faq-section section"
-        >
+        <section class="section faq-section">
 
-            <div class="faq-heading reveal">
+            <div class="section-heading centered reveal">
 
                 <span class="section-label">
                     QUESTIONS
                 </span>
 
                 <h2>
-                    Before you launch.
+                    Everything else
+                    you might want to know.
                 </h2>
-
-                <p>
-                    A few things teams usually want to know
-                    before getting started.
-                </p>
 
             </div>
 
 
-            <div class="faq-list">
+            <div class="faq-list reveal">
 
 
-                <article class="faq-item reveal">
+                <article class="faq-item">
 
                     <button
                         class="faq-question"
                         type="button"
                         aria-expanded="false"
                     >
-
                         <span>
-                            Can I try Rocket Product before paying?
+                            Can Rocket One run multiple displays?
                         </span>
 
-                        <b>
-                            +
-                        </b>
-
+                        <b>+</b>
                     </button>
 
                     <div class="faq-answer">
-
                         <p>
-                            Yes. Every plan begins with a free trial
-                            so you can explore the platform before
-                            choosing a paid plan.
+                            Yes. Rocket One is designed for
+                            multi-display workstations using its
+                            high-speed display and USB-C connectivity.
                         </p>
-
                     </div>
 
                 </article>
 
 
-                <article class="faq-item reveal">
+                <article class="faq-item">
 
                     <button
                         class="faq-question"
                         type="button"
                         aria-expanded="false"
                     >
-
                         <span>
-                            Can Rocket replace our current project tools?
+                            Is the memory upgradeable later?
                         </span>
 
-                        <b>
-                            +
-                        </b>
-
+                        <b>+</b>
                     </button>
 
                     <div class="faq-answer">
-
                         <p>
-                            Rocket is designed to combine project
-                            tracking, automation, analytics, and team
-                            visibility in one workspace.
+                            This product concept uses configurable
+                            memory at purchase. The 32 GB and
+                            64 GB configurations are selected before
+                            ordering.
                         </p>
-
                     </div>
 
                 </article>
 
 
-                <article class="faq-item reveal">
+                <article class="faq-item">
 
                     <button
                         class="faq-question"
                         type="button"
                         aria-expanded="false"
                     >
-
                         <span>
-                            Does Rocket work for small teams?
+                            Is this a real product?
                         </span>
 
-                        <b>
-                            +
-                        </b>
-
+                        <b>+</b>
                     </button>
 
                     <div class="faq-answer">
-
                         <p>
-                            Yes. The platform works for individuals,
-                            small teams, and larger organizations.
-                            You can scale features as your needs grow.
+                            Rocket One is a fictional product created
+                            as a portfolio project demonstrating
+                            product design, front-end development,
+                            interaction design, and responsive web
+                            development.
                         </p>
-
                     </div>
 
                 </article>
 
 
-                <article class="faq-item reveal">
+                <article class="faq-item">
 
                     <button
                         class="faq-question"
                         type="button"
                         aria-expanded="false"
                     >
-
                         <span>
-                            Is my data secure?
+                            Does the configurator actually work?
                         </span>
 
-                        <b>
-                            +
-                        </b>
-
+                        <b>+</b>
                     </button>
 
                     <div class="faq-answer">
-
                         <p>
-                            The concept includes encrypted connections,
-                            secure authentication, access controls, and
-                            enterprise security options.
+                            Yes. Memory and storage selections update
+                            the configuration and total price
+                            dynamically using JavaScript.
                         </p>
-
                     </div>
 
                 </article>
@@ -1379,94 +1398,84 @@
         </section>
 
 
-        <!-- ==================================================
+        <!-- =====================================================
              FINAL CTA
-        =================================================== -->
+        ====================================================== -->
 
-        <section class="final-cta section reveal">
+        <section class="final-cta">
 
-            <div class="cta-glow"></div>
+            <div class="final-cta-glow"></div>
 
+            <div class="final-cta-content reveal">
 
-            <span class="section-label">
-                READY FOR LIFTOFF?
-            </span>
+                <span class="section-label">
+                    ROCKET ONE
+                </span>
 
+                <h2>
+                    Big workstation energy.
+                    <span>Without the workstation.</span>
+                </h2>
 
-            <h2>
-                Your next great project
-                shouldn't move slowly.
-            </h2>
+                <p>
+                    Compact. Quiet. Powerful.
+                    Designed for the modern desk.
+                </p>
 
+                <a
+                    href="#configure"
+                    class="primary-button"
+                >
+                    Configure Rocket One
+                    <span>→</span>
+                </a>
 
-            <p>
-                Build the workflow. Automate the noise.
-                Launch with momentum.
-            </p>
-
-
-            <a
-                class="primary-button large-button"
-                href="#pricing"
-            >
-                Start Your Launch
-                <span>→</span>
-            </a>
+            </div>
 
         </section>
 
     </main>
 
 
-    <!-- ==================================================
+    <!-- =====================================================
          FOOTER
-    =================================================== -->
+    ====================================================== -->
 
     <footer class="site-footer">
 
-        <div class="footer-main">
+        <div class="footer-top">
 
             <a
-                class="brand"
                 href="#home"
+                class="brand"
             >
-
-                <span class="brand-icon">
-                    ↗
+                <span class="brand-symbol">
+                    R
                 </span>
 
-                <span class="brand-text">
-
-                    <strong>
-                        Rocket
-                    </strong>
-
-                    <small>
-                        PRODUCT
-                    </small>
-
+                <span class="brand-name">
+                    Rocket
                 </span>
-
             </a>
 
 
             <p>
-                Work at launch speed.
+                High-performance technology for smaller spaces.
             </p>
 
 
-            <div class="footer-links">
+            <div class="footer-nav">
 
-                <a href="#features">
-                    Features
+                <a href="#product">
+                    Product
                 </a>
 
-                <a href="#pricing">
-                    Pricing
+                <a href="#specs">
+                    Specs
                 </a>
 
-                <a href="#faq">
-                    FAQ
+                <a href="#configure">
+                    Configure
                 </a>
 
             </div>
@@ -1481,7 +1490,7 @@
             </span>
 
             <span>
-                Designed & built by Letherius Miller
+                Portfolio concept by Letherius Miller
             </span>
 
         </div>
@@ -1489,15 +1498,117 @@
     </footer>
 
 
+    <!-- =====================================================
+         PRODUCT TOUR MODAL
+    ====================================================== -->
+
     <div
-        id="toast"
-        class="toast"
-        role="status"
-        aria-live="polite"
-    ></div>
+        id="product-modal"
+        class="product-modal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-backdrop"></div>
 
 
-    <script src="script.js?v=2.0.0"></script>
+        <div
+            class="modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
+        >
+
+            <button
+                id="modal-close"
+                class="modal-close"
+                type="button"
+                aria-label="Close product tour"
+            >
+                ×
+            </button>
+
+
+            <div class="modal-image">
+
+                <img
+                    src="images/rocket-lifestyle.png"
+                    alt="Rocket One workspace"
+                >
+
+            </div>
+
+
+            <div class="modal-copy">
+
+                <span class="section-label">
+                    PRODUCT TOUR
+                </span>
+
+                <h2 id="modal-title">
+                    Built for the way
+                    modern work actually looks.
+                </h2>
+
+                <p>
+                    Rocket One delivers powerful desktop performance
+                    in a format that works equally well in a home
+                    office, development environment, studio, or
+                    professional workspace.
+                </p>
+
+
+                <div class="modal-features">
+
+                    <div>
+                        <strong>
+                            01
+                        </strong>
+
+                        <span>
+                            Compact footprint
+                        </span>
+                    </div>
+
+                    <div>
+                        <strong>
+                            02
+                        </strong>
+
+                        <span>
+                            High-speed connectivity
+                        </span>
+                    </div>
+
+                    <div>
+                        <strong>
+                            03
+                        </strong>
+
+                        <span>
+                            Quiet thermal design
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="#configure"
+                    id="modal-configure"
+                    class="primary-button"
+                >
+                    Configure yours
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js?v=3.0.0"></script>
 
 </body>
 </html>
