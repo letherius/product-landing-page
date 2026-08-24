@@ -2,35 +2,1502 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Rocket Product</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Rocket Product is a modern productivity command center for projects, automation, analytics, and focused work."
+    >
+
+    <meta
+        name="theme-color"
+        content="#05070b"
+    >
+
+    <title>Rocket Product | Work at Launch Speed</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="styles.css?v=2.0.0"
+    >
 </head>
+
 <body>
-    <header>
-        <h1>🚀 Rocket Product</h1>
-        <p>Your Solution to All Problems!</p>
+
+    <div class="page-noise"></div>
+    <div class="background-orb orb-one"></div>
+    <div class="background-orb orb-two"></div>
+
+
+    <!-- ==================================================
+         NAVIGATION
+    =================================================== -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a
+                class="brand"
+                href="#home"
+                aria-label="Rocket Product home"
+            >
+
+                <span class="brand-icon">
+                    ↗
+                </span>
+
+                <span class="brand-text">
+                    <strong>Rocket</strong>
+                    <small>PRODUCT</small>
+                </span>
+
+            </a>
+
+
+            <button
+                id="menu-toggle"
+                class="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+
+            <div
+                id="nav-links"
+                class="nav-links"
+            >
+
+                <a href="#features">
+                    Features
+                </a>
+
+                <a href="#workflow">
+                    How It Works
+                </a>
+
+                <a href="#reviews">
+                    Reviews
+                </a>
+
+                <a href="#pricing">
+                    Pricing
+                </a>
+
+                <a href="#faq">
+                    FAQ
+                </a>
+
+            </div>
+
+
+            <a
+                class="nav-cta"
+                href="#pricing"
+            >
+                Get Started
+                <span>→</span>
+            </a>
+
+        </nav>
+
     </header>
-    <section class="features">
-        <div class="feature">
-            <div class="image-box">
-                <img src="iron.jpg" alt="Feature 1 Image">
+
+
+    <main>
+
+        <!-- ==================================================
+             HERO
+        =================================================== -->
+
+        <section
+            id="home"
+            class="hero section"
+        >
+
+            <div class="hero-content reveal">
+
+                <div class="eyebrow">
+
+                    <span class="pulse-dot"></span>
+
+                    The productivity system built for momentum
+
+                </div>
+
+
+                <h1>
+                    Turn scattered work into
+                    <span>one launch sequence.</span>
+                </h1>
+
+
+                <p class="hero-description">
+                    Rocket Product combines projects, automation,
+                    analytics, and daily priorities into one focused
+                    command center built to keep work moving.
+                </p>
+
+
+                <div class="hero-actions">
+
+                    <a
+                        class="primary-button"
+                        href="#pricing"
+                    >
+                        Start Building Momentum
+                        <span>→</span>
+                    </a>
+
+
+                    <button
+                        id="launch-demo"
+                        class="secondary-button"
+                        type="button"
+                    >
+
+                        <span class="play-icon">
+                            ▶
+                        </span>
+
+                        Run Live Demo
+
+                    </button>
+
+                </div>
+
+
+                <div class="hero-proof">
+
+                    <div>
+                        <strong>10x</strong>
+                        <span>Faster workflows</span>
+                    </div>
+
+                    <div>
+                        <strong>99.99%</strong>
+                        <span>Platform uptime</span>
+                    </div>
+
+                    <div>
+                        <strong>24/7</strong>
+                        <span>Workflow automation</span>
+                    </div>
+
+                </div>
+
             </div>
-            <h2>Feature 1</h2>
-            <p>Discover the power of Feature 1. It's like magic!</p>
-        </div>
-        <div class="feature">
-            <div class="image-box">
-                <img src="eye drops.jpg" alt="Feature 2 Image">
+
+
+            <!-- PRODUCT DASHBOARD MOCKUP -->
+
+            <div class="hero-product reveal">
+
+                <div class="product-glow"></div>
+
+
+                <div class="dashboard">
+
+                    <div class="dashboard-top">
+
+                        <div>
+
+                            <span class="dashboard-label">
+                                MISSION CONTROL
+                            </span>
+
+                            <h2>
+                                Monday Launch Plan
+                            </h2>
+
+                        </div>
+
+
+                        <div class="status-pill">
+                            <span></span>
+                            Live
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-grid">
+
+
+                        <div class="dashboard-main">
+
+                            <div class="progress-header">
+
+                                <span>
+                                    Weekly momentum
+                                </span>
+
+                                <strong id="momentum-value">
+                                    74%
+                                </strong>
+
+                            </div>
+
+
+                            <div class="progress-bar">
+
+                                <div
+                                    id="momentum-bar"
+                                    class="progress-fill"
+                                ></div>
+
+                            </div>
+
+
+                            <div class="mission-list">
+
+
+                                <div class="mission-item complete">
+
+                                    <span class="mission-check">
+                                        ✓
+                                    </span>
+
+                                    <div>
+
+                                        <strong>
+                                            Launch campaign
+                                        </strong>
+
+                                        <small>
+                                            Marketing
+                                        </small>
+
+                                    </div>
+
+                                    <span class="mission-time">
+                                        Done
+                                    </span>
+
+                                </div>
+
+
+                                <div class="mission-item active">
+
+                                    <span class="mission-check">
+                                        02
+                                    </span>
+
+                                    <div>
+
+                                        <strong>
+                                            Product analytics
+                                        </strong>
+
+                                        <small>
+                                            Growth dashboard
+                                        </small>
+
+                                    </div>
+
+                                    <span class="mission-time">
+                                        12 min
+                                    </span>
+
+                                </div>
+
+
+                                <div class="mission-item">
+
+                                    <span class="mission-check">
+                                        03
+                                    </span>
+
+                                    <div>
+
+                                        <strong>
+                                            Review sprint
+                                        </strong>
+
+                                        <small>
+                                            Engineering
+                                        </small>
+
+                                    </div>
+
+                                    <span class="mission-time">
+                                        28 min
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="dashboard-side">
+
+
+                            <div class="metric-card orange">
+
+                                <span>
+                                    Focus score
+                                </span>
+
+                                <strong id="focus-score">
+                                    92
+                                </strong>
+
+                                <small>
+                                    +14 this week
+                                </small>
+
+                            </div>
+
+
+                            <div class="metric-card">
+
+                                <span>
+                                    Automated
+                                </span>
+
+                                <strong id="automation-count">
+                                    18
+                                </strong>
+
+                                <small>
+                                    tasks today
+                                </small>
+
+                            </div>
+
+
+                            <div class="mini-chart">
+
+                                <div class="chart-header">
+
+                                    <span>
+                                        Output
+                                    </span>
+
+                                    <strong>
+                                        +38%
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="bars">
+
+                                    <span style="height: 32%"></span>
+                                    <span style="height: 46%"></span>
+                                    <span style="height: 41%"></span>
+                                    <span style="height: 65%"></span>
+                                    <span style="height: 58%"></span>
+                                    <span style="height: 82%"></span>
+                                    <span style="height: 94%"></span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="demo-status"
+                        class="demo-status"
+                    >
+                        System ready. Launch sequence standing by.
+                    </div>
+
+                </div>
+
             </div>
-            <h2>Feature 2</h2>
-            <p>Experience Feature 2 in action. Prepare to be amazed!</p>
+
+        </section>
+
+
+        <!-- ==================================================
+             LOGO / TRUST STRIP
+        =================================================== -->
+
+        <section class="trust-strip">
+
+            <span>
+                Built for teams that refuse to move slowly
+            </span>
+
+            <div class="company-list">
+
+                <strong>APEX</strong>
+                <strong>VECTOR</strong>
+                <strong>NOVA</strong>
+                <strong>ORBIT</strong>
+                <strong>SUMMIT</strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             FEATURES
+        =================================================== -->
+
+        <section
+            id="features"
+            class="features-section section"
+        >
+
+            <div class="section-heading reveal">
+
+                <span class="section-label">
+                    BUILT DIFFERENT
+                </span>
+
+                <h2>
+                    Everything your workflow
+                    <span>actually needs.</span>
+                </h2>
+
+                <p>
+                    Fewer tabs. Fewer disconnected tools. More time
+                    spent moving important work forward.
+                </p>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+
+                <article class="feature-card feature-large reveal">
+
+                    <div class="feature-icon">
+                        ⚡
+                    </div>
+
+                    <span class="feature-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Automation Engine
+                    </h3>
+
+                    <p>
+                        Build workflows that move repetitive work
+                        automatically while keeping your team focused
+                        on decisions that actually matter.
+                    </p>
+
+
+                    <div class="automation-preview">
+
+                        <div class="automation-row">
+
+                            <span class="automation-dot"></span>
+
+                            New project created
+
+                        </div>
+
+
+                        <div class="automation-line"></div>
+
+
+                        <div class="automation-row">
+
+                            <span class="automation-icon">
+                                ↯
+                            </span>
+
+                            Assign team automatically
+
+                        </div>
+
+
+                        <div class="automation-line"></div>
+
+
+                        <div class="automation-row success">
+
+                            <span>
+                                ✓
+                            </span>
+
+                            Workflow launched
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="feature-card reveal">
+
+                    <div class="feature-icon">
+                        ◎
+                    </div>
+
+                    <span class="feature-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Focus Intelligence
+                    </h3>
+
+                    <p>
+                        See exactly what deserves attention next,
+                        based on priority, workload, timing, and
+                        project impact.
+                    </p>
+
+                    <div class="focus-visual">
+
+                        <div class="focus-ring">
+                            <span>92</span>
+                        </div>
+
+                        <small>
+                            Focus score
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <article class="feature-card reveal">
+
+                    <div class="feature-icon">
+                        ◒
+                    </div>
+
+                    <span class="feature-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Live Analytics
+                    </h3>
+
+                    <p>
+                        Understand velocity, output, bottlenecks,
+                        and progress without building another
+                        spreadsheet.
+                    </p>
+
+                    <div class="analytics-bars">
+
+                        <span style="height: 38%"></span>
+                        <span style="height: 56%"></span>
+                        <span style="height: 44%"></span>
+                        <span style="height: 77%"></span>
+                        <span style="height: 66%"></span>
+                        <span style="height: 93%"></span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="feature-card feature-wide reveal">
+
+                    <div>
+
+                        <div class="feature-icon">
+                            ⌘
+                        </div>
+
+                        <span class="feature-number">
+                            04
+                        </span>
+
+                        <h3>
+                            One workspace. Every mission.
+                        </h3>
+
+                        <p>
+                            Projects, notes, tasks, reporting,
+                            automation, and team visibility live
+                            together instead of being scattered
+                            across different tools.
+                        </p>
+
+                    </div>
+
+
+                    <div class="workspace-preview">
+
+                        <div class="workspace-sidebar">
+
+                            <span class="active"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="workspace-content">
+
+                            <div></div>
+                            <div></div>
+                            <div></div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             WORKFLOW
+        =================================================== -->
+
+        <section
+            id="workflow"
+            class="workflow-section section"
+        >
+
+            <div class="section-heading centered reveal">
+
+                <span class="section-label">
+                    HOW IT WORKS
+                </span>
+
+                <h2>
+                    From idea to execution
+                    <span>without the drag.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="workflow-grid">
+
+
+                <article class="workflow-step reveal">
+
+                    <span class="step-number">
+                        01
+                    </span>
+
+                    <div class="step-icon">
+                        +
+                    </div>
+
+                    <h3>
+                        Build
+                    </h3>
+
+                    <p>
+                        Create the project, goal, or workflow
+                        you want your team to move.
+                    </p>
+
+                </article>
+
+
+                <div class="workflow-connector">
+                    →
+                </div>
+
+
+                <article class="workflow-step reveal">
+
+                    <span class="step-number">
+                        02
+                    </span>
+
+                    <div class="step-icon">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        Automate
+                    </h3>
+
+                    <p>
+                        Let Rocket handle assignments, reminders,
+                        updates, and routine actions.
+                    </p>
+
+                </article>
+
+
+                <div class="workflow-connector">
+                    →
+                </div>
+
+
+                <article class="workflow-step reveal">
+
+                    <span class="step-number">
+                        03
+                    </span>
+
+                    <div class="step-icon">
+                        ↗
+                    </div>
+
+                    <h3>
+                        Launch
+                    </h3>
+
+                    <p>
+                        Track progress in real time and keep momentum
+                        moving toward the finish line.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             STATS
+        =================================================== -->
+
+        <section class="stats-section reveal">
+
+            <div>
+
+                <strong>
+                    42%
+                </strong>
+
+                <span>
+                    Less time spent on admin work
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    3.8x
+                </strong>
+
+                <span>
+                    Faster project handoffs
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    11 hrs
+                </strong>
+
+                <span>
+                    Saved per user each month
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    4.9/5
+                </strong>
+
+                <span>
+                    Average team rating
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             REVIEWS
+        =================================================== -->
+
+        <section
+            id="reviews"
+            class="reviews-section section"
+        >
+
+            <div class="section-heading reveal">
+
+                <span class="section-label">
+                    WHAT TEAMS SAY
+                </span>
+
+                <h2>
+                    Built to feel
+                    <span>immediately useful.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="review-grid">
+
+
+                <article class="review-card reveal">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        “Rocket replaced three different tools for
+                        our team. The biggest difference is that
+                        everyone finally knows what matters next.”
+                    </p>
+
+                    <div class="review-person">
+
+                        <span>AM</span>
+
+                        <div>
+
+                            <strong>
+                                Alex Morgan
+                            </strong>
+
+                            <small>
+                                Product Operations
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="review-card featured-review reveal">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        “The automation alone paid for the platform.
+                        We stopped chasing status updates and started
+                        spending that time actually shipping.”
+                    </p>
+
+                    <div class="review-person">
+
+                        <span>JC</span>
+
+                        <div>
+
+                            <strong>
+                                Jordan Cole
+                            </strong>
+
+                            <small>
+                                Engineering Lead
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="review-card reveal">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        “It feels less like project management
+                        software and more like a command center for
+                        the entire company.”
+                    </p>
+
+                    <div class="review-person">
+
+                        <span>SK</span>
+
+                        <div>
+
+                            <strong>
+                                Samira King
+                            </strong>
+
+                            <small>
+                                Operations Director
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             PRICING
+        =================================================== -->
+
+        <section
+            id="pricing"
+            class="pricing-section section"
+        >
+
+            <div class="section-heading centered reveal">
+
+                <span class="section-label">
+                    SIMPLE PRICING
+                </span>
+
+                <h2>
+                    Start small.
+                    <span>Scale without friction.</span>
+                </h2>
+
+                <p>
+                    Everything you need to get moving.
+                    Upgrade only when your team grows.
+                </p>
+
+            </div>
+
+
+            <div class="billing-toggle reveal">
+
+                <button
+                    id="monthly-toggle"
+                    class="billing-option active"
+                    type="button"
+                >
+                    Monthly
+                </button>
+
+                <button
+                    id="annual-toggle"
+                    class="billing-option"
+                    type="button"
+                >
+                    Annual
+
+                    <span>
+                        Save 20%
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <div class="pricing-grid">
+
+
+                <article class="pricing-card reveal">
+
+                    <span class="plan-name">
+                        Starter
+                    </span>
+
+                    <h3>
+                        For focused individuals
+                    </h3>
+
+                    <div class="price">
+
+                        <span>
+                            $
+                        </span>
+
+                        <strong
+                            class="price-value"
+                            data-monthly="12"
+                            data-annual="9"
+                        >
+                            12
+                        </strong>
+
+                        <small>
+                            / month
+                        </small>
+
+                    </div>
+
+
+                    <ul>
+
+                        <li>
+                            ✓ Unlimited projects
+                        </li>
+
+                        <li>
+                            ✓ Personal automation
+                        </li>
+
+                        <li>
+                            ✓ Productivity analytics
+                        </li>
+
+                        <li>
+                            ✓ 5 GB storage
+                        </li>
+
+                    </ul>
+
+
+                    <button
+                        class="plan-button"
+                        type="button"
+                    >
+                        Start Free
+                    </button>
+
+                </article>
+
+
+                <article class="pricing-card popular reveal">
+
+                    <div class="popular-label">
+                        MOST POPULAR
+                    </div>
+
+                    <span class="plan-name">
+                        Pro
+                    </span>
+
+                    <h3>
+                        For teams building momentum
+                    </h3>
+
+                    <div class="price">
+
+                        <span>
+                            $
+                        </span>
+
+                        <strong
+                            class="price-value"
+                            data-monthly="29"
+                            data-annual="23"
+                        >
+                            29
+                        </strong>
+
+                        <small>
+                            / user
+                        </small>
+
+                    </div>
+
+
+                    <ul>
+
+                        <li>
+                            ✓ Everything in Starter
+                        </li>
+
+                        <li>
+                            ✓ Advanced automation
+                        </li>
+
+                        <li>
+                            ✓ Team dashboards
+                        </li>
+
+                        <li>
+                            ✓ Unlimited storage
+                        </li>
+
+                        <li>
+                            ✓ Priority support
+                        </li>
+
+                    </ul>
+
+
+                    <button
+                        class="plan-button primary-plan"
+                        type="button"
+                    >
+                        Start Pro
+                    </button>
+
+                </article>
+
+
+                <article class="pricing-card reveal">
+
+                    <span class="plan-name">
+                        Scale
+                    </span>
+
+                    <h3>
+                        For larger organizations
+                    </h3>
+
+                    <div class="price enterprise-price">
+
+                        <strong>
+                            Custom
+                        </strong>
+
+                    </div>
+
+
+                    <ul>
+
+                        <li>
+                            ✓ Everything in Pro
+                        </li>
+
+                        <li>
+                            ✓ Enterprise security
+                        </li>
+
+                        <li>
+                            ✓ SSO and provisioning
+                        </li>
+
+                        <li>
+                            ✓ Dedicated onboarding
+                        </li>
+
+                    </ul>
+
+
+                    <button
+                        class="plan-button"
+                        type="button"
+                    >
+                        Contact Sales
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             FAQ
+        =================================================== -->
+
+        <section
+            id="faq"
+            class="faq-section section"
+        >
+
+            <div class="faq-heading reveal">
+
+                <span class="section-label">
+                    QUESTIONS
+                </span>
+
+                <h2>
+                    Before you launch.
+                </h2>
+
+                <p>
+                    A few things teams usually want to know
+                    before getting started.
+                </p>
+
+            </div>
+
+
+            <div class="faq-list">
+
+
+                <article class="faq-item reveal">
+
+                    <button
+                        class="faq-question"
+                        type="button"
+                        aria-expanded="false"
+                    >
+
+                        <span>
+                            Can I try Rocket Product before paying?
+                        </span>
+
+                        <b>
+                            +
+                        </b>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Yes. Every plan begins with a free trial
+                            so you can explore the platform before
+                            choosing a paid plan.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="faq-item reveal">
+
+                    <button
+                        class="faq-question"
+                        type="button"
+                        aria-expanded="false"
+                    >
+
+                        <span>
+                            Can Rocket replace our current project tools?
+                        </span>
+
+                        <b>
+                            +
+                        </b>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Rocket is designed to combine project
+                            tracking, automation, analytics, and team
+                            visibility in one workspace.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="faq-item reveal">
+
+                    <button
+                        class="faq-question"
+                        type="button"
+                        aria-expanded="false"
+                    >
+
+                        <span>
+                            Does Rocket work for small teams?
+                        </span>
+
+                        <b>
+                            +
+                        </b>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Yes. The platform works for individuals,
+                            small teams, and larger organizations.
+                            You can scale features as your needs grow.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="faq-item reveal">
+
+                    <button
+                        class="faq-question"
+                        type="button"
+                        aria-expanded="false"
+                    >
+
+                        <span>
+                            Is my data secure?
+                        </span>
+
+                        <b>
+                            +
+                        </b>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            The concept includes encrypted connections,
+                            secure authentication, access controls, and
+                            enterprise security options.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             FINAL CTA
+        =================================================== -->
+
+        <section class="final-cta section reveal">
+
+            <div class="cta-glow"></div>
+
+
+            <span class="section-label">
+                READY FOR LIFTOFF?
+            </span>
+
+
+            <h2>
+                Your next great project
+                shouldn't move slowly.
+            </h2>
+
+
+            <p>
+                Build the workflow. Automate the noise.
+                Launch with momentum.
+            </p>
+
+
+            <a
+                class="primary-button large-button"
+                href="#pricing"
+            >
+                Start Your Launch
+                <span>→</span>
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================================
+         FOOTER
+    =================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+            <a
+                class="brand"
+                href="#home"
+            >
+
+                <span class="brand-icon">
+                    ↗
+                </span>
+
+                <span class="brand-text">
+
+                    <strong>
+                        Rocket
+                    </strong>
+
+                    <small>
+                        PRODUCT
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <p>
+                Work at launch speed.
+            </p>
+
+
+            <div class="footer-links">
+
+                <a href="#features">
+                    Features
+                </a>
+
+                <a href="#pricing">
+                    Pricing
+                </a>
+
+                <a href="#faq">
+                    FAQ
+                </a>
+
+            </div>
+
         </div>
-        <!-- Add more features here -->
-    </section>
-    <footer>
-        <p>© 2024 Rocket Product. Made with ❤️ by Letherius</p>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Rocket Product
+            </span>
+
+            <span>
+                Designed & built by Letherius Miller
+            </span>
+
+        </div>
+
     </footer>
-    <script src="script.js"></script>
+
+
+    <div
+        id="toast"
+        class="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+
+    <script src="script.js?v=2.0.0"></script>
+
 </body>
 </html>
